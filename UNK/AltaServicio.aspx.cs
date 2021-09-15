@@ -36,29 +36,33 @@ namespace UNK
                    // calendario pongo el formato fecha comforme base de datos SQL
                     
 
-                string dia = calFecha.SelectedDate.Day.ToString();
-                string mes = calFecha.SelectedDate.Month.ToString();
-                string ano = calFecha.SelectedDate.Year.ToString();
-                string f1 = ano + "/" + mes + "/" + dia;
+                    string dia = calFecha.SelectedDate.Day.ToString();
+                    string mes = calFecha.SelectedDate.Month.ToString();
+                    string ano = calFecha.SelectedDate.Year.ToString();
+                    string f1 = ano + "/" + mes + "/" + dia;
                
 
-                 dia = calVencimiento.SelectedDate.Day.ToString();
-                 mes = calVencimiento.SelectedDate.Month.ToString();
-                 ano = calVencimiento.SelectedDate.Year.ToString();
-                string f2 = ano + "/" + mes + "/" + dia;
+                     dia = calVencimiento.SelectedDate.Day.ToString();
+                     mes = calVencimiento.SelectedDate.Month.ToString();
+                     ano = calVencimiento.SelectedDate.Year.ToString();
+                    string f2 = ano + "/" + mes + "/" + dia;
 
-                string orden = "insert into TServicio (IdProveedor,IdEquipo,Descripcion,Fecha,Vencimiento) values ('" + dropIdProveedor.Text + "','" + dropIdEquipo.Text + "','" + txtDescripcion.Text + "','" + f1 + "','" + f2 + "')";
-                 
+                     string orden = "insert into TServicio (IdProveedor,IdEquipo,Descripcion,Fecha,Vencimiento) values ('" + dropIdProveedor.Text + "','" + dropIdEquipo.Text + "','" + txtDescripcion.Text + "','" + f1 + "','" + f2 + "')";
+
+                if (txtDescripcion.Text != "")
+                {
 
                     conexion.Open();
-                   SqlCommand comando = new SqlCommand(orden, conexion);
-
+                    SqlCommand comando = new SqlCommand(orden, conexion);
                     comando.ExecuteNonQuery();
                     conexion.Close();
-                    btnGuardar.Enabled = false;
-                    LabelResultado.Text = "DATO AGREGADO CORRECTAMENTE LA BASE DE DATOS";
+                    LabelResultado.Text = "DATO AGREGADO CORRECTAMENTE A LA BASE DE DATOS";
                     btnGuardar.Visible = false;
-                    }
+                }
+                else LabelResultado.Text = "DESCRIPCION CAMBO OBLIGATORIO ,NO SE AGREGARON DATOS";
+
+
+                }
               catch
                   {
                     

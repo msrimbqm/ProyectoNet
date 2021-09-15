@@ -2,6 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <link href="css/Styles.css" rel="stylesheet" />
+    <div class="jumbotron">
+        
+                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="160px" />
+
+                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="Red"></asp:Label>
+              
+
+    </div>
 
     <div class="container">
 
@@ -49,7 +57,9 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calFecha" runat="server"  Width="370px" ShowGridLines="True"></asp:Calendar>
+                      <asp:Calendar ID="calFecha" runat="server"  Width="370px" ShowGridLines="True">
+                          <SelectedDayStyle BackColor="#3399FF" />
+                      </asp:Calendar>
                      
                 </div>
              </div>
@@ -73,7 +83,9 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calVencimiento" runat="server" Width="379px" ShowGridLines="True"></asp:Calendar>
+                      <asp:Calendar ID="calVencimiento" runat="server" Width="379px" ShowGridLines="True">
+                          <SelectorStyle BackColor="#3399FF" />
+                      </asp:Calendar>
                      
                 </div>
 
@@ -92,15 +104,7 @@
 
         
 
-                      <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
-                      </br>              
-                              
-
-                      <br />
-                              
-
-                      <asp:Label ID="LabelResultado" runat="server" Text=""></asp:Label>
-              
+                      
 
         
 

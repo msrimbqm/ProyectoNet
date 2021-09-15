@@ -221,8 +221,8 @@ C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\bin\Microsof
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\bin\es\System.Web.Optimization.resources.dll
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\obj\Debug\UNK.csproj.AssemblyReference.cache
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\obj\Debug\UNK.csproj.CoreCompileInputs.cache
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\obj\Debug\UNK.csproj.CopyComplete
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\obj\Debug\UNK.dll
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\obj\Debug\UNK.pdb
+C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet\v1\v1\UNK\obj\Debug\UNK.csproj.AssemblyReference.cache

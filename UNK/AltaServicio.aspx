@@ -2,6 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="css/Styles.css" rel="stylesheet" />
 
+     <div class="jumbotron">
+        
+                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="160px" />
+                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="#FF3300"></asp:Label>
+
+    </div>
+
     <div class="container">
 
               <div class="text-center mt-5">
@@ -95,20 +102,6 @@
                      <asp:FileUpload ID="fileup" runat="server" />
                 </div>
               </div>
-              
-
-        
-
-                      <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
-                      </br>              
-                              
-
-                      <br />
-                              
-
-                      <asp:Label ID="LabelResultado" runat="server" Text=""></asp:Label>
-              
-
         
 
         </div> <!-- de container-->

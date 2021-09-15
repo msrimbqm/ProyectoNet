@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -44,11 +45,8 @@ namespace UNK
             {
                 // borrar ese id
 
-                
-
-
-                //try
-               // {
+               try
+                {
 
                     string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
 
@@ -64,15 +62,15 @@ namespace UNK
 
                     if (cantidad == 1) LabelResultado.Text = "REGISTRO BORRADO";
                     else
-                      //  LabelResultado.Text = "No existe un usuario con ese Id";
+                        LabelResultado.Text = "DEBE SELECCIONAR UN REGISTRO";
 
                     conexion.Close();
-               // }
-              //  catch
-               // {
-                   //LabelResultado.Text = "ERROR DE BORRADO EN BASE DE DATOS";
+                }
+                catch
+                {
+                   LabelResultado.Text = "ERROR DE BORRADO EN BASE DE DATOS";
 
-               // }
+                 }
 
 
 
@@ -85,5 +83,46 @@ namespace UNK
 
 
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtFiltrarTrabajo_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void txtFiltrarTrabajo_TextChanged1(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            // deber cargar los datos en los textbox del id seleccionado
+            
+
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
+
+            SqlConnection conexion = new SqlConnection(s);
+            conexion.Open();
+            string cadena = "select S.IdServicio, S.Descripcion as Trabajo, S.Fecha as Intervencion, S.Vencimiento as Vencimiento, P.Nombre as Proveedor,E.Descripcion as Equipo from TProveedor as P inner join TServicio as S on P.IdProveedor = S.IdProveedor inner join TEquipo as E on S.IdEquipo = E.IdEquipo where S.Descripcion like '%" + txtFiltrarTrabajo.Text + "%'";
+
+
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            GridView1.DataSourceID = "";
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+
+            conexion.Close();
+        }
     }
+    
 }
