@@ -36,7 +36,7 @@
                 </div>
                  
                  <div class="controles">
-                     <asp:DropDownList ID="dropIdProveedor"  runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="IdProveedor"></asp:DropDownList>
+                     <asp:DropDownList ID="dropIdProveedor"  runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="IdProveedor" Height="22px" Width="400px"></asp:DropDownList>
                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [IdProveedor], [Nombre] FROM [TProveedor]"></asp:SqlDataSource>
                 </div>
              </div>
@@ -48,7 +48,7 @@
                 </div>
                  
                  <div class="controles">
-                     <asp:DropDownList ID="dropIdEquipo" runat="server" DataSourceID="SqlDataSource2" DataTextField="Descripcion" DataValueField="IdEquipo"></asp:DropDownList>
+                     <asp:DropDownList ID="dropIdEquipo" runat="server" DataSourceID="SqlDataSource2" DataTextField="Descripcion" DataValueField="IdEquipo" Height="21px" Width="400px"></asp:DropDownList>
                      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [IdEquipo], [Descripcion], [Ubicacion] FROM [TEquipo]"></asp:SqlDataSource>
                 </div>
              </div>
@@ -59,11 +59,11 @@
                      <asp:Label ID="Label4" runat="server" Text="Fecha:"></asp:Label>
                 </div>
                    
-                 <div class="controles">
+                 <!--<div class="controles">-->
                       <asp:Calendar ID="calFecha" runat="server"  Width="349px"  OnSelectionChanged="calFecha_SelectionChanged" >
                       </asp:Calendar>
                      
-                </div>
+                <!--</div>-->
              </div>
 
                 <div class="filas">
@@ -74,19 +74,20 @@
                    
                  <div class="controles">
                       
-                     <asp:TextBox ID="txtDescripcion" runat="server" Height="121px" Width="560px" TextMode="MultiLine"></asp:TextBox>
+                     <asp:TextBox ID="txtDescripcion" runat="server" Height="126px"  TextMode="MultiLine" Width="391px"></asp:TextBox>
                 </div>
               </div>
 
                   <div class="filas">
 
-                 <div class="titulos">
+                    <div class="titulos">
                      <asp:Label ID="Label7" runat="server" Text="Vencimiento:"></asp:Label>
-                </div>
+                    </div>
                    
-                 <div class="controles">
+                     <!--<div class="controles">-->
                       <asp:Calendar ID="calVencimiento" runat="server" Width="347px" OnSelectionChanged="calVencimiento_SelectionChanged">
                       </asp:Calendar>
+                     <!--</div>-->
                      
                 </div>
 

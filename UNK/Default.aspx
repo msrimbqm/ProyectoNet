@@ -29,7 +29,7 @@
     </div>
    
     <div>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdServicio" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="982px" Height="343px" PageSize="20" style="margin-top: 20px" Font-Overline="False">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdServicio" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="1023px" Height="343px" PageSize="20" style="margin-top: 20px" Font-Overline="False">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:CommandField SelectText="■■" ShowSelectButton="True" />

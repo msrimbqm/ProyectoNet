@@ -38,7 +38,7 @@
                 </div>
                  
                  <div class="controles">
-                     <asp:DropDownList ID="dropIdProveedor" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="IdProveedor"></asp:DropDownList>
+                     <asp:DropDownList ID="dropIdProveedor" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="IdProveedor" Width="399px"></asp:DropDownList>
                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [IdProveedor], [Nombre] FROM [TProveedor]"></asp:SqlDataSource>
                 </div>
              </div>
@@ -50,7 +50,7 @@
                 </div>
                  
                  <div class="controles">
-                     <asp:DropDownList ID="dropIdEquipo" runat="server" DataSourceID="SqlDataSource2" DataTextField="Descripcion" DataValueField="IdEquipo"></asp:DropDownList>
+                     <asp:DropDownList ID="dropIdEquipo" runat="server" DataSourceID="SqlDataSource2" DataTextField="Descripcion" DataValueField="IdEquipo" Width="400px"></asp:DropDownList>
                      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [IdEquipo], [Descripcion], [Ubicacion] FROM [TEquipo]"></asp:SqlDataSource>
                 </div>
              </div>
@@ -61,11 +61,11 @@
                      <asp:Label ID="Label4" runat="server" Text="Fecha:"></asp:Label>
                 </div>
                    
-                 <div class="controles">
+                <!-- <div class="controles">-->
                       <asp:Calendar ID="calFecha" runat="server"  Width="350px">
                       </asp:Calendar>
                      
-                </div>
+                <!--</div>-->
              </div>
 
                 <div class="filas">
@@ -86,11 +86,11 @@
                      <asp:Label ID="Label7" runat="server" Text="Vencimiento:"></asp:Label>
                 </div>
                    
-                 <div class="controles">
+                 <!--<div class="controles">-->
                       <asp:Calendar ID="calVencimiento" runat="server" Width="350px">
                       </asp:Calendar>
                      
-                </div>
+                <!--</div>-->
 
 
                 <div class="filas">

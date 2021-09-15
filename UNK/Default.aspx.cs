@@ -56,8 +56,8 @@ namespace UNK
                    // LabelResultado.Text = cadena;
                     SqlCommand comando = new SqlCommand(cadena, conexion);
                     int cantidad = comando.ExecuteNonQuery();
-
-                    GridView1.DataBind();
+                   
+                    
 
 
                     if (cantidad == 1) LabelResultado.Text = "REGISTRO BORRADO";
