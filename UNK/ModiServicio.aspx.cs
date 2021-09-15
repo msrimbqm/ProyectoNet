@@ -49,7 +49,7 @@ namespace UNK
                     calFecha.VisibleDate = Convert.ToDateTime(cadena);
                  
                    
-                    LabelResultado.Text = calFecha.SelectedDate.ToString();
+                   // LabelResultado.Text = calFecha.SelectedDate.ToString();
                     
 
                     cadena = f2.Day.ToString() + "/" + f2.Month.ToString() + "/" + f2.Year.ToString();
