@@ -33,6 +33,7 @@ namespace UNK
                 {
                     // encontro el registro
                     dropIdProveedor.Text = registro["IdProveedor"].ToString();
+                    
                     dropIdEquipo.Text = registro["IdEquipo"].ToString();
                     txtDescripcion.Text = registro["Descripcion"].ToString();
 
