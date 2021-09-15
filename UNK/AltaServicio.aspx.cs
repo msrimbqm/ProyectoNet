@@ -16,9 +16,8 @@ namespace UNK
         
         protected void Page_Load(object sender, EventArgs e)
         {
-           // calFecha.VisibleDate = DateTime.Today;
-            //calFecha.SelectedDate = Convert.ToDateTime("12/08/2021");
-
+            
+            
         }
 
        
@@ -27,50 +26,56 @@ namespace UNK
         {
             // guarda los datos que esten los cuadro en la base de datos puede ser añadir o modificar segun el parametro de entrada
 
-            
-            
               try
                {
 
                     string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
 
                     SqlConnection conexion = new SqlConnection(s);
-                    string f1 = calFecha.SelectedDate.ToString();
-                    f1 = f1.Substring(0, 10);
-                    string f2 = calVencimiento.SelectedDate.ToString();
-                    f2 = f2.Substring(0, 10);
+                  
+                   // calendario pongo el formato fecha comforme base de datos SQL
+                    
 
-                     
-          
+                string dia = calFecha.SelectedDate.Day.ToString();
+                string mes = calFecha.SelectedDate.Month.ToString();
+                string ano = calFecha.SelectedDate.Year.ToString();
+                string f1 = ano + "/" + mes + "/" + dia;
+               
 
+                 dia = calVencimiento.SelectedDate.Day.ToString();
+                 mes = calVencimiento.SelectedDate.Month.ToString();
+                 ano = calVencimiento.SelectedDate.Year.ToString();
+                string f2 = ano + "/" + mes + "/" + dia;
 
-                    string orden = "insert into TServicio (IdProveedor,IdEquipo,Descripcion,Fecha,Vencimiento) values ('" + dropIdProveedor.Text + "','" + dropIdEquipo.Text + "','" + txtDescripcion.Text + "','" + f1 + "','" + f2 + "')";
-                   LabelResultado.Text = orden;
+                string orden = "insert into TServicio (IdProveedor,IdEquipo,Descripcion,Fecha,Vencimiento) values ('" + dropIdProveedor.Text + "','" + dropIdEquipo.Text + "','" + txtDescripcion.Text + "','" + f1 + "','" + f2 + "')";
+                 
 
                     conexion.Open();
+                   SqlCommand comando = new SqlCommand(orden, conexion);
 
-                    
-            
-            SqlCommand comando = new SqlCommand(orden, conexion);
-
-                   comando.ExecuteNonQuery();
+                    comando.ExecuteNonQuery();
                     conexion.Close();
                     btnGuardar.Enabled = false;
-                   LabelResultado.Text = "DATO AGREGADO CORRECTAMENTE LA BASE DE DATOS";
+                    LabelResultado.Text = "DATO AGREGADO CORRECTAMENTE LA BASE DE DATOS";
                     btnGuardar.Visible = false;
                     }
               catch
                   {
-                  LabelResultado.Text = "ERROR ACCCESO BASE DE DATOS ,NO SE AGREGARON DATOS";
+                    
+                    LabelResultado.Text = "ERROR ACCCESO BASE DE DATOS ,NO SE AGREGARON DATOS";
 
                    }
 
+        }
 
+        protected void calFecha_SelectionChanged(object sender, EventArgs e)
+        {
             
-          
+        }
 
-
-
+        protected void calVencimiento_SelectionChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

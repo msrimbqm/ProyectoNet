@@ -49,7 +49,7 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calFecha" runat="server" DayNameFormat="Shortest"></asp:Calendar>
+                      <asp:Calendar ID="calFecha" runat="server"  Width="370px" ShowGridLines="True"></asp:Calendar>
                      
                 </div>
              </div>
@@ -73,7 +73,7 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calVencimiento" runat="server"></asp:Calendar>
+                      <asp:Calendar ID="calVencimiento" runat="server" Width="379px" ShowGridLines="True"></asp:Calendar>
                      
                 </div>
 
@@ -99,7 +99,7 @@
                       <br />
                               
 
-                      <asp:Label ID="LabelResultado" runat="server" Text="Label"></asp:Label>
+                      <asp:Label ID="LabelResultado" runat="server" Text=""></asp:Label>
               
 
         

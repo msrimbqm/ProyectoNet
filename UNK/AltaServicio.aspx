@@ -48,9 +48,10 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calFecha" runat="server" DayNameFormat="Shortest" Width="358px">
+                      <asp:Calendar ID="calFecha" runat="server"  Width="358px"  OnSelectionChanged="calFecha_SelectionChanged" ShowGridLines="True">
                           <DayHeaderStyle BackColor="#FF5050" />
                           <SelectedDayStyle BackColor="#3399FF" />
+                          <TodayDayStyle BackColor="#CCFFFF" />
                       </asp:Calendar>
                      
                 </div>
@@ -75,9 +76,10 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calVencimiento" runat="server" Width="361px">
+                      <asp:Calendar ID="calVencimiento" runat="server" Width="361px" OnSelectionChanged="calVencimiento_SelectionChanged" ShowGridLines="True">
                           <DayHeaderStyle BackColor="#FF5050" />
                           <SelectedDayStyle BackColor="#3399FF" />
+                          <TodayDayStyle BackColor="#CCFFFF" />
                       </asp:Calendar>
                      
                 </div>
@@ -104,7 +106,7 @@
                       <br />
                               
 
-                      <asp:Label ID="LabelResultado" runat="server" Text="Label"></asp:Label>
+                      <asp:Label ID="LabelResultado" runat="server" Text=""></asp:Label>
               
 
         
