@@ -10,7 +10,7 @@
 
 div.titulos {
     box-sizing: border-box;
-    width: 40%;
+    width: 45%;
     float: left;
     text-align: right;
     margin-right: 1em;
@@ -19,5 +19,58 @@ div.titulos {
 div.controles {
     box-sizing: border-box;
     float: left;
-    width: 50%;
+    width: 27%;
+}
+
+#cabecera1a {
+
+    background-color:burlywood;
+}
+
+#cabecera2a {
+    background-color: burlywood;
+    
+}
+
+#cabecera1b {
+    background-color: crimson;
+    border-radius: 20px;
+}
+
+#cabecera2b {
+    background-color: crimson;
+    border-radius: 20px;
+}
+
+#cabecera1c {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+#cabecera2c {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+
+#cabecera0a {
+    background-color: burlywood;
+}
+
+#cabecera0b {
+    background-color: crimson;
+    border-radius: 20px;
+}
+
+.botonin {
+    border-radius: 10px;
+    background-color:darkgoldenrod;
+    color:black;
+    border-style:none;
+        
+}
+
+.cuadrobuscar {
+    border-radius: 10px;
+    border-style:none;
 }

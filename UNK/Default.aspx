@@ -1,22 +1,28 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="UNK._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="css/styles.css" rel="Styles.css" />
-    <div class="jumbotron">
+
+    <link href="css/Styles.css" rel="stylesheet" />
+
+    <div class="text-center mt-5" id="cabecera0b">
+                 <h1> UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp;      SERVICIOS REGISTRADOS </h1>
+     </div> 
+
+    <div class="jumbotron" id="cabecera0a">
         
-        <asp:Button ID="btnAlta" runat="server" Text="Alta Servicio" OnClick="btnAlta_Click" Width="144px" />
+        <asp:Button ID="btnAlta" class="botonin" runat="server" Text="Alta Servicio" OnClick="btnAlta_Click" Width="144px" />
 
-        <asp:Button ID="btnModificar" runat="server" Text="Modificar Servicio" OnClick="btnModificar_Click" Width="128px" />
+        <asp:Button ID="btnModificar" class="botonin" runat="server" Text="Editar Servicio" OnClick="btnModificar_Click" Width="144px" />
 
-        <asp:Button ID="btnBorrar" runat="server" OnClick="btnBorrar_Click" Text="Borrar" Width="114px" />
+        <asp:Button ID="btnBorrar" class="botonin" runat="server" OnClick="btnBorrar_Click" Text="Borrar" Width="144px" OnClientClick="return confirm('Confirme Borrado');"  />
 
-        <asp:TextBox ID="txtId" runat="server" Visible="False" Width="28px"></asp:TextBox>
+        <asp:TextBox ID="txtId"  runat="server" Visible="False" Width="28px"></asp:TextBox>
 
         <asp:Label ID="Label1" runat="server" Text="Filtrar Trabajo:   "></asp:Label>
 
-        <asp:TextBox ID="txtFiltrarTrabajo" runat="server" Width="150px" OnTextChanged="txtFiltrarTrabajo_TextChanged1"></asp:TextBox>
+        <asp:TextBox ID="txtFiltrarTrabajo" class="cuadrobuscar" runat="server" Width="259px" OnTextChanged="txtFiltrarTrabajo_TextChanged1"></asp:TextBox>
 
-        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" Width="113px" OnClick="btnFiltrar_Click" />
+        <asp:Button ID="btnFiltrar" class="botonin" runat="server" Text="Filtrar" Width="144px" OnClick="btnFiltrar_Click" />
 
         <asp:Label ID="LabelResultado" runat="server" Text=" " ForeColor="Red"></asp:Label>
 
@@ -29,14 +35,14 @@
             <asp:CommandField SelectText="■■" ShowSelectButton="True" />
             <asp:BoundField DataField="IdServicio" HeaderText="IdServicio" InsertVisible="False" ReadOnly="True" SortExpression="IdServicio" />
             <asp:BoundField DataField="Trabajo" HeaderText="Trabajo" SortExpression="Trabajo" />
-            <asp:BoundField DataField="Intervencion" HeaderText="Intervencion" SortExpression="Intervencion" />
-            <asp:BoundField DataField="Vencimiento" HeaderText="Vencimiento" SortExpression="Vencimiento" />
+            <asp:BoundField DataField="Intervencion" HeaderText="Intervencion" SortExpression="Intervencion"  DataFormatString="{0:d}" />
+            <asp:BoundField DataField="Vencimiento" HeaderText="Vencimiento" SortExpression="Vencimiento" DataFormatString="{0:d}"  />
             <asp:BoundField DataField="Proveedor" HeaderText="Proveedor" SortExpression="Proveedor" />
             <asp:BoundField DataField="Equipo" HeaderText="Equipo" SortExpression="Equipo" />
         </Columns>
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="Crimson" Font-Bold="True" ForeColor="Black" />
         <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
         <RowStyle BackColor="#E3EAEB" />
         <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />

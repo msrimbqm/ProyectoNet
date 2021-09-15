@@ -2,18 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="css/Styles.css" rel="stylesheet" />
 
-     <div class="jumbotron">
+     <div class="text-center mt-5" id="cabecera1b">
+                 <h1>  UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp; ALTA DE SERVICIO </h1>
+     </div> 
+    <div class="jumbotron" id="cabecera1a">
         
-                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="160px" />
-                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="#FF3300"></asp:Label>
+                 <asp:Button Class="botonin" ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="144px" /> &nbsp;
+
+                 <asp:Button ID="btnHome" runat="server" Text="Volver" class="botonin" OnClick="btnHome_Click" Width="144px" />
+
+                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="#FF3300" ></asp:Label>
 
     </div>
 
-    <div class="container">
+    <div class="container" id="cabecera1c">
 
-              <div class="text-center mt-5">
-                 <h1>ALTA DE SERVICIO </h1>
-             </div>
+             
+
              <div class="filas">
 
                  <div class="titulos">
@@ -31,7 +36,7 @@
                 </div>
                  
                  <div class="controles">
-                     <asp:DropDownList ID="dropIdProveedor" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="IdProveedor"></asp:DropDownList>
+                     <asp:DropDownList ID="dropIdProveedor"  runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Nombre" DataValueField="IdProveedor"></asp:DropDownList>
                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [IdProveedor], [Nombre] FROM [TProveedor]"></asp:SqlDataSource>
                 </div>
              </div>
@@ -55,10 +60,7 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calFecha" runat="server"  Width="358px"  OnSelectionChanged="calFecha_SelectionChanged" ShowGridLines="True">
-                          <DayHeaderStyle BackColor="#FF5050" />
-                          <SelectedDayStyle BackColor="#3399FF" />
-                          <TodayDayStyle BackColor="#CCFFFF" />
+                      <asp:Calendar ID="calFecha" runat="server"  Width="349px"  OnSelectionChanged="calFecha_SelectionChanged" >
                       </asp:Calendar>
                      
                 </div>
@@ -72,7 +74,7 @@
                    
                  <div class="controles">
                       
-                     <asp:TextBox ID="txtDescripcion" runat="server" Height="121px" Width="433px" TextMode="MultiLine"></asp:TextBox>
+                     <asp:TextBox ID="txtDescripcion" runat="server" Height="121px" Width="560px" TextMode="MultiLine"></asp:TextBox>
                 </div>
               </div>
 
@@ -83,10 +85,7 @@
                 </div>
                    
                  <div class="controles">
-                      <asp:Calendar ID="calVencimiento" runat="server" Width="361px" OnSelectionChanged="calVencimiento_SelectionChanged" ShowGridLines="True">
-                          <DayHeaderStyle BackColor="#FF5050" />
-                          <SelectedDayStyle BackColor="#3399FF" />
-                          <TodayDayStyle BackColor="#CCFFFF" />
+                      <asp:Calendar ID="calVencimiento" runat="server" Width="347px" OnSelectionChanged="calVencimiento_SelectionChanged">
                       </asp:Calendar>
                      
                 </div>
