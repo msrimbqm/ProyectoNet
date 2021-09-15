@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.filas {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    clear: both;
+}
+
+div.titulos {
+    box-sizing: border-box;
+    width: 40%;
+    float: left;
+    text-align: right;
+    margin-right: 1em;
+}
+
+div.controles {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+}
