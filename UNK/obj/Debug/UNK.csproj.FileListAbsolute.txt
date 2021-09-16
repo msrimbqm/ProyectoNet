@@ -297,7 +297,6 @@ C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\bin\Microsoft.AspNet.Fr
 C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\obj\Debug\UNK.csproj.AssemblyReference.cache
 C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\obj\Debug\UNK.csproj.CoreCompileInputs.cache
 C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\obj\Debug\UNK.csproj.CopyComplete
 C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\obj\Debug\UNK.dll
@@ -454,3 +453,4 @@ C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet2\UNK\obj\Debug\UNK.csp
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet2\UNK\obj\Debug\UNK.csproj.CopyComplete
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet2\UNK\obj\Debug\UNK.dll
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet2\UNK\obj\Debug\UNK.pdb
+C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\obj\Debug\UNK.csproj.AssemblyReference.cache

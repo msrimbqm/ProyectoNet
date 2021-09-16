@@ -74,7 +74,7 @@
                    
                  <div class="controles">
                       
-                     <asp:TextBox ID="txtDescripcion" runat="server" Height="126px"  TextMode="MultiLine" Width="391px"></asp:TextBox>
+                     <asp:TextBox ID="txtDescripcion" runat="server" placeholder="Describa el servicio" Height="126px"  TextMode="MultiLine" Width="391px"></asp:TextBox>
                 </div>
               </div>
 

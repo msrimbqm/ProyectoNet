@@ -6,6 +6,7 @@
     box-sizing: border-box;
     padding: 1em;
     clear: both;
+   
 }
 
 div.titulos {
@@ -14,12 +15,25 @@ div.titulos {
     float: left;
     text-align: right;
     margin-right: 1em;
+   
 }
 
 div.controles {
     box-sizing: border-box;
     float: left;
     width: 70%;
+    
+}
+
+#txtDireccion {
+    width:100%!important;
+    
+}
+
+.input{
+
+    width:80%;
+    
 }
 
 #cabecera1a {
