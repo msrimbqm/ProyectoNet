@@ -132,6 +132,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="img\gear.png" />
     <Content Include="img\icogear.ico" />
+    <Content Include="ModiEquipos.aspx" />
     <Content Include="ModiProveedor.aspx" />
     <Content Include="ModiServicio.aspx" />
     <Content Include="Proveedores.aspx" />
@@ -224,6 +225,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ModiEquipos.aspx.cs">
+      <DependentUpon>ModiEquipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModiEquipos.aspx.designer.cs">
+      <DependentUpon>ModiEquipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModiProveedor.aspx.cs">
       <DependentUpon>ModiProveedor.aspx</DependentUpon>

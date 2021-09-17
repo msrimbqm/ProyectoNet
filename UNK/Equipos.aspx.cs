@@ -18,12 +18,17 @@ namespace UNK
 
         protected void btnAlta_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("AltaEquipo.aspx");
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
-
+            if (txtIdE.Text != "")
+            {
+                // COMPRUEBA LO MANDA A ABRI PAGINA CON UNO SELECCCIONADO
+                string cadena = "ModiEquipos.aspx?id=" + txtIdE.Text;
+                Response.Redirect(cadena);
+            }
         }
 
         protected void btnBorrar_Click(object sender, EventArgs e)

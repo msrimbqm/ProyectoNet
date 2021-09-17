@@ -1,11 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AltaEquipo.aspx.cs" Inherits="UNK.AltaEquipo" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ModiEquipos.aspx.cs" Inherits="UNK.ModiEquipos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <link href="css/Styles.css" rel="stylesheet" />
 
-     <div class="text-center mt-5 cabeceralogo">
-                 <h1>  UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp; ALTA DE EQUIPO </h1>
+     <link href="css/Styles.css" rel="stylesheet" />
+
+     <div class="text-center mt-5" id="cabecera1b">
+                 <h1>  UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp; MODIFICACION DE EQUIPO </h1>
      </div> 
-    <div class="jumbotron cabecerabotones" >
+
+    <div class="jumbotron" id="cabecera1a">
         
                  <asp:Button Class="botonin" ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="144px" /> &nbsp;
 
@@ -15,7 +17,8 @@
 
     </div>
 
-    <div class="container cabeceracampos">
+
+     <div class="container cabeceracampos">
 
             
 
@@ -117,8 +120,11 @@
 
         <h1> </h1>                                      
 
+
+                
+        
+
         </div> <!-- de container-->
 
 
-      
 </asp:Content>

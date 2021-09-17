@@ -65,7 +65,7 @@ namespace UNK
 
                 string orden = "update TProveedor set  CIF='" + txtCIF.Text + "', Nombre='" + txtNombre.Text + "',Direccion='" + TxtDireccion.Text + "',Provincia='" + txtProvincia.Text + "',CP='" + txtCP.Text + "',Mail='" + txtMail.Text + "',Telefono='" + txtTelefono.Text + "', Contacto='" + txtContacto.Text + "',Observaciones='" + txtObservaciones.Text + "',Ciudad='" + txtCiudad.Text + "' where IdProveedor='"+txtIdProveedor.Text+"'";
 
-                LabelResultado.Text = orden;
+                //LabelResultado.Text = orden;
 
                 if ((txtCIF.Text != "") && (txtNombre.Text != ""))
                 {
