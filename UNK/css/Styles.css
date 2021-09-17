@@ -31,9 +31,6 @@ div.controles {
 }
 
 .input{
-
-    width:80%;
-    
 }
 
 #cabecera1a {
@@ -45,6 +42,17 @@ div.controles {
     background-color: burlywood;
     
 }
+
+#cabecera1c {
+    background-color: burlywood;
+}
+
+#cabecera2c {
+    background-color: burlywood;
+}
+
+
+
 
 #cabecera1b {
     background-color: crimson;
@@ -75,6 +83,38 @@ div.controles {
     background-color: crimson;
     border-radius: 20px;
 }
+
+#cabecera3b {
+    background-color: crimson;
+    border-radius: 20px;
+}
+
+#cabecera3c {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+#cabecera2c {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+
+.cabeceralogo {
+    background-color:crimson;
+}
+
+.cabecerabotones {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+.cabeceracampos {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+
+
 
 .botonin {
     border-radius: 10px;

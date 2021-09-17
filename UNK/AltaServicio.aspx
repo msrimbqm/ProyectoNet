@@ -60,7 +60,7 @@
                 </div>
                    
                  <!--<div class="controles">-->
-                      <asp:Calendar ID="calFecha" runat="server"  Width="349px"  OnSelectionChanged="calFecha_SelectionChanged" >
+                      <asp:Calendar ID="calFecha" runat="server"  Width="349px"  OnSelectionChanged="calFecha_SelectionChanged">
                       </asp:Calendar>
                      
                 <!--</div>-->

@@ -37,13 +37,13 @@
                      <asp:TextBox ID="txtCIF" placeholder="Identficador Fiscal" runat="server" Enabled="True"></asp:TextBox>
                 </div>
             
-            </div>
-
-          <div class="filas">
                 <div class="titulos">
                      <asp:Label ID="Label3" runat="server" Text="Nombre:"></asp:Label>
                 </div>
                  <div class="controles">
+            </div>
+
+          <div class="filas">
                      <asp:TextBox ID="txtNombre" placeholder="Denominacion" runat="server" Enabled="True" Width="465px"></asp:TextBox>
                 </div>
             

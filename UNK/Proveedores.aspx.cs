@@ -52,7 +52,7 @@ namespace UNK
 
 
 
-                    if (cantidad == 1) LabelResultado.Text = "REGISTRO BORRADO";
+                    if (cantidad == 1) LabelResultado.Text = "";
                     else
                         LabelResultado.Text = "DEBE SELECCIONAR UN REGISTRO";
 

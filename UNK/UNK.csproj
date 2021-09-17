@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AltaEquipo.aspx" />
     <Content Include="AltaProveedor.aspx" />
     <Content Include="AltaServicio.aspx" />
     <Content Include="Contact.aspx" />
@@ -116,6 +117,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\Styles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Equipos.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -169,6 +171,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaEquipo.aspx.cs">
+      <DependentUpon>AltaEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaEquipo.aspx.designer.cs">
+      <DependentUpon>AltaEquipo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AltaProveedor.aspx.cs">
       <DependentUpon>AltaProveedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,6 +214,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos.aspx.cs">
+      <DependentUpon>Equipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equipos.aspx.designer.cs">
+      <DependentUpon>Equipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
