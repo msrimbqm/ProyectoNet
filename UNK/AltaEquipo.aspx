@@ -6,14 +6,19 @@
                  <h1>  UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp; ALTA DE EQUIPO </h1>
      </div> 
     <div class="jumbotron cabecerabotones" >
+                <div>
         
                  <asp:Button Class="botonin" ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="144px" /> &nbsp;
 
                  <asp:Button ID="btnHome" runat="server" Text="Volver" class="botonin" OnClick="btnHome_Click" Width="144px" />
 
-                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="#FF3300" ></asp:Label>
+                </div>
+                         <div class="divaviso>"
+                                   <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="Black" BackColor="Red" ></asp:Label>
+                        </div>
 
-    </div>
+
+     </div>
 
     <div class="container cabeceracampos">
 
