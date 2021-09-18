@@ -29,6 +29,9 @@ namespace UNK
                 string cadena = "ModiProveedor.aspx?id=" + txtIdP.Text;
                 Response.Redirect(cadena);
             }
+            else
+                LabelResultado.Text = "SELECCIONE UN REGISTRO";
+
         }
 
         protected void btnBorrar_Click(object sender, EventArgs e)
@@ -100,6 +103,11 @@ namespace UNK
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtIdP.Text = GridView1.SelectedRow.Cells[1].Text;
+        }
+
+        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
         {
             txtIdP.Text = GridView1.SelectedRow.Cells[1].Text;
         }

@@ -33,88 +33,36 @@ div.controles {
 .input{
 }
 
-#cabecera1a {
 
-    background-color:burlywood;
-}
-
-#cabecera2a {
-    background-color: burlywood;
-    
-}
-
-#cabecera1c {
-    background-color: burlywood;
-}
-
-#cabecera2c {
-    background-color: burlywood;
-}
-
-
-
-
-#cabecera1b {
-    background-color: crimson;
-    border-radius: 20px;
-}
-
-#cabecera2b {
-    background-color: crimson;
-    border-radius: 20px;
-}
-
-#cabecera1c {
-    background-color: burlywood;
-    border-radius: 20px;
-}
-
-#cabecera2c {
-    background-color: burlywood;
-    border-radius: 20px;
-}
-
-
-#cabecera0a {
-    background-color: burlywood;
-}
-
-#cabecera0b {
-    background-color: crimson;
-    border-radius: 20px;
-}
-
-#cabecera3b {
-    background-color: crimson;
-    border-radius: 20px;
-}
-
-#cabecera3c {
-    background-color: burlywood;
-    border-radius: 20px;
-}
-
-#cabecera2c {
-    background-color: burlywood;
-    border-radius: 20px;
-}
 
 
 .cabeceralogo {
     background-color:crimson;
+    border-radius:20px;
 }
 
 .cabecerabotones {
     background-color: burlywood;
     border-radius: 20px;
+    padding:20px;
+    
 }
 
 .cabeceracampos {
     background-color: burlywood;
-    border-radius: 20px;
+    border-radius:20px;
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
+.divaviso{
 
+    border-radius:20px;
+    text-align:right;
+  
+
+
+}
 
 .botonin {
     border-radius: 10px;
@@ -125,6 +73,6 @@ div.controles {
 }
 
 .cuadrobuscar {
-    border-radius: 10px;
+    border-radius: 100px;
     border-style:none;
 }

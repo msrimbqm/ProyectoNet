@@ -30,6 +30,8 @@ namespace UNK
                 string cadena = "ModiServicio.aspx?id=" + txtId.Text;
                 Response.Redirect(cadena);
             }
+            else
+                LabelResultado.Text="SELECCIONE UN REGISTRO";
         }
 
         protected void btnAlta_Click(object sender, EventArgs e)
@@ -114,6 +116,11 @@ namespace UNK
             GridView1.DataBind();
 
             conexion.Close();
+        }
+
+        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            txtId.Text = GridView1.SelectedRow.Cells[1].Text;
         }
     }
     

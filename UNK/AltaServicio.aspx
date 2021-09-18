@@ -2,20 +2,32 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="css/Styles.css" rel="stylesheet" />
 
-     <div class="text-center mt-5" id="cabecera1b">
-                 <h1>  UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp; ALTA DE SERVICIO </h1>
+     <div class="text-center mt-5 cabeceralogo">
+                 <h1> UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp; ALTA SERVICIOS </h1>
      </div> 
-    <div class="jumbotron" id="cabecera1a">
+                 
+
+
+
+
+    <div class="jumbotron cabecerabotones">
+        <div>
         
                  <asp:Button Class="botonin" ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" Width="144px" /> &nbsp;
 
                  <asp:Button ID="btnHome" runat="server" Text="Volver" class="botonin" OnClick="btnHome_Click" Width="144px" />
+        </div>
+          <div class="divaviso">
+             
+            <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="Black" BackColor="Red"></asp:Label>
 
-                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="#FF3300" ></asp:Label>
+        </div>
+        </div>
 
-    </div>
 
-    <div class="container" id="cabecera1c">
+     
+
+    <div class="container cabeceracampos">
 
              
 

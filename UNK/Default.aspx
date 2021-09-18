@@ -4,11 +4,13 @@
 
     <link href="css/Styles.css" rel="stylesheet" />
 
-    <div class="text-center mt-5" id="cabecera0b">
+    <div class="text-center mt-5 cabeceralogo">
                  <h1> UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp;      SERVICIOS REGISTRADOS </h1>
      </div> 
 
-    <div class="jumbotron" id="cabecera0a">
+    <div class="jumbotron cabecerabotones">
+
+        <div>
         
         <asp:Button ID="btnAlta" class="botonin" runat="server" Text="Alta Servicio" OnClick="btnAlta_Click" Width="144px" />
 
@@ -20,16 +22,20 @@
 
         <asp:Label ID="Label1" runat="server" Text="Filtrar Trabajo:   "></asp:Label>
 
-        <asp:TextBox ID="txtFiltrarTrabajo" class="cuadrobuscar" runat="server" Width="259px" OnTextChanged="txtFiltrarTrabajo_TextChanged1"></asp:TextBox>
+        <asp:TextBox ID="txtFiltrarTrabajo" class="cuadrobuscar" runat="server" Width="195px" OnTextChanged="txtFiltrarTrabajo_TextChanged1"></asp:TextBox>
 
         <asp:Button ID="btnFiltrar" class="botonin" runat="server" Text="Filtrar" Width="144px" OnClick="btnFiltrar_Click" />
+        </div>
+        <div class="divaviso">
 
         <asp:Label ID="LabelResultado" runat="server" Text=" " ForeColor="Red"></asp:Label>
+        </div>
 
     </div>
    
-    <div>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdServicio" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1033px">
+    <div class="cabeceracampos">
+        <h1></h1>
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdServicio" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1057px" Height="302px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField SelectText="■■" ShowSelectButton="True" />
@@ -54,7 +60,13 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SQLConnectionString %>" SelectCommand="select S.IdServicio, S.Descripcion as Trabajo, S.Fecha as Intervencion, S.Vencimiento as Vencimiento, P.Nombre as Proveedor,E.Descripcion as Equipo 
                    from TProveedor as P inner join TServicio as S on P.IdProveedor = S.IdProveedor
                   inner join TEquipo as E on S.IdEquipo=E.IdEquipo"></asp:SqlDataSource>
-        </div>
+        <h1></h1>
+        <h1></h1>
+
+
+       </div>
+    
+    
 
     
 

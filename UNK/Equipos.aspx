@@ -2,33 +2,31 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <link href="css/Styles.css" rel="stylesheet" />
 
-    <div class="text-center mt-5" id="cabecera0b">
+    <div class="text-center mt-5 cabeceralogo">
                  <h1> UnKeeper <img src="img/gear.png" width="100" height="100"> &nbsp;  &nbsp; &nbsp;     EQUIPOS REGISTRADOS </h1>
      </div> 
 
-    <div class="jumbotron" id="cabecera0a">
-        
-        <asp:Button ID="btnAltaE" class="botonin" runat="server" Text="Alta Equipo" OnClick="btnAlta_Click" Width="144px" />
+    <div class="jumbotron cabecerabotones">
+       <div>        
+                    <asp:Button ID="btnAltaE" class="botonin" runat="server" Text="Alta Equipo" OnClick="btnAlta_Click" Width="144px" />
+                   <asp:Button ID="btnModificarE" class="botonin" runat="server" Text="Editar Equipo" OnClick="btnModificar_Click" Width="144px" />
+                   <asp:Button ID="btnBorrarE" class="botonin" runat="server" OnClick="btnBorrar_Click" Text="Borrar" Width="144px" OnClientClick="return confirm('Confirme Borrado');"  />
+                   <asp:TextBox ID="txtIdE"  runat="server" Visible="False" Width="28px"></asp:TextBox>
+                   <asp:Label ID="Label1" runat="server" Text="Filtrar Descripción::   "></asp:Label>
+                   <asp:TextBox ID="txtFiltrarNombre" class="cuadrobuscar" runat="server" Width="259px" OnTextChanged="txtFiltrarTrabajo_TextChanged1"></asp:TextBox>
+                   <asp:Button ID="btnFiltrar" class="botonin" runat="server" Text="Filtrar" Width="144px" OnClick="btnFiltrar_Click" />
+          </div>
+        <div class="divaviso">
 
-        <asp:Button ID="btnModificarE" class="botonin" runat="server" Text="Editar Equipo" OnClick="btnModificar_Click" Width="144px" />
+                 <asp:Label ID="LabelResultado" runat="server" Text=""  BackColor="Red" ForeColor="Black"></asp:Label>
 
-        <asp:Button ID="btnBorrarE" class="botonin" runat="server" OnClick="btnBorrar_Click" Text="Borrar" Width="144px" OnClientClick="return confirm('Confirme Borrado');"  />
-
-        <asp:TextBox ID="txtIdE"  runat="server" Visible="False" Width="28px"></asp:TextBox>
-
-        <asp:Label ID="Label1" runat="server" Text="Filtrar Descripción::   "></asp:Label>
-
-        <asp:TextBox ID="txtFiltrarNombre" class="cuadrobuscar" runat="server" Width="259px" OnTextChanged="txtFiltrarTrabajo_TextChanged1"></asp:TextBox>
-
-        <asp:Button ID="btnFiltrar" class="botonin" runat="server" Text="Filtrar" Width="144px" OnClick="btnFiltrar_Click" />
-
-        <asp:Label ID="LabelResultado" runat="server" Text=" " ForeColor="Red"></asp:Label>
+         </div>
 
     </div>
    
-    <div>
+    <div class="cabeceracampos">
    
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdEquipo" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1006px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdEquipo" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1006px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Height="269px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField SelectText="■■" ShowSelectButton="True" />

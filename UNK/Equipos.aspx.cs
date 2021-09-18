@@ -29,6 +29,9 @@ namespace UNK
                 string cadena = "ModiEquipos.aspx?id=" + txtIdE.Text;
                 Response.Redirect(cadena);
             }
+            else
+                LabelResultado.Text = "SELECCIONE UN REGISTRO";
+
         }
 
         protected void btnBorrar_Click(object sender, EventArgs e)
