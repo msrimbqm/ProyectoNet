@@ -130,6 +130,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="img\engranajesok.jpg" />
     <Content Include="img\gear.png" />
     <Content Include="img\icogear.ico" />
     <Content Include="ModiEquipos.aspx" />

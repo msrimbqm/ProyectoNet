@@ -1,7 +1,10 @@
 ﻿body {
+    background-image: url('img/engranajesok.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.filas {
+    .filas {
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
