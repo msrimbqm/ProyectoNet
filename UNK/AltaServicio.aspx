@@ -111,26 +111,53 @@
                  </div>
                       
                  <div class="controles">
-                     <asp:FileUpload ID="FileUpload1" runat="server" />
-                     &nbsp;
-                     &nbsp;
                 
                      <asp:Button class="botonin" ID="btnUpload" runat="server" Text="Subir Archivo" Width="100px" OnClick="btnUpload_Click" />
              
             
         
         
+                     <asp:FileUpload ID="FileUpload1" runat="server" />
+                     &nbsp;
+                     &nbsp;
+                
+                                 
+        
+        
                <div>
                         <asp:GridView ID="GridView1" runat="server"   
               
-                         AutoGenerateColumns="False" CssClass="table" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" DataSourceID="SqlDataSource4" Width="524px">  
+                         AutoGenerateColumns="False" CssClass="table" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" DataSourceID="SqlDataSource4" Width="524px" CellPadding="4" ForeColor="#333333" GridLines="None">  
+                            <AlternatingRowStyle BackColor="White" />
                          <Columns>  
-                       <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />  
+
+                             <asp:CommandField ShowSelectButton="True" />
+                             <asp:BoundField DataField="id" HeaderText="ID" SortExpression="Name" />  
+                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />  
+
+                             <asp:TemplateField ItemStyle-HorizontalAlign="Center">  
+                            <ItemTemplate>  
+                              <asp:LinkButton ID="lnkDownload" runat="server" Text="Download" OnClick="DownloadFile"  
+                              CommandArgument='<%# Eval("Id") %>'></asp:LinkButton>  
+                             </ItemTemplate>  
+                              </asp:TemplateField>  
+
+
                          </Columns>  
+                            <EditRowStyle BackColor="#7C6F57" />
+                            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="Crimson" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#E3EAEB" />
+                            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                            <SortedAscendingHeaderStyle BackColor="#246B61" />
+                            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                            <SortedDescendingHeaderStyle BackColor="#15524A" />
                         </asp:GridView> 
                        
 
-                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [Name] FROM [TFiles]" 
+                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [id,Name] FROM [TFiles]" 
                         >
 
                      </asp:SqlDataSource>

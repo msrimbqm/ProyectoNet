@@ -103,7 +103,7 @@ namespace UNK
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
@@ -177,27 +177,92 @@ namespace UNK
         }
 
         protected void cargargrid(string p)
+
         {
+            
+            // cargar grid archivos con ese servicio
+
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
 
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
-            string cadena = "select Name from TFiles where idServicio='" + p + "'";
-
-
+            string cadena = "select id,Name from TFiles where idServicio='" + p + "'";
             SqlCommand comando = new SqlCommand(cadena, conexion);
-
             SqlDataAdapter da = new SqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             GridView1.DataSourceID = "";
             GridView1.DataSource = dt;
             GridView1.DataBind();
-
             conexion.Close();
 
         }
 
+
+        protected void DownloadFile(object sender, EventArgs e)
+        {
+            int id = int.Parse((sender as LinkButton).CommandArgument);
+            byte[] bytes;
+            string fileName, contentType;
+            string constr = ConfigurationManager.ConnectionStrings["SQLConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.CommandText = "select id, Name, Data, ContentType from TFiles where id=@Id";
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        bytes = (byte[])sdr["Data"];
+                        contentType = sdr["ContentType"].ToString();
+                        fileName = sdr["Name"].ToString();
+                    }
+                    con.Close();
+                }
+            }
+            Response.Clear();
+            Response.Buffer = true;
+            Response.Charset = "";
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.ContentType = contentType;
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
+            Response.BinaryWrite(bytes);
+            Response.Flush();
+            Response.End();
+        }
+
+
+
+        private void BindGrid()
+        {
+            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.CommandText = "select id, Name from TFiles";
+                    cmd.Connection = con;
+                    con.Open();
+                    GridView1.DataSource = cmd.ExecuteReader();
+                    GridView1.DataBind();
+                    con.Close();
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
     }
+
+
 }
