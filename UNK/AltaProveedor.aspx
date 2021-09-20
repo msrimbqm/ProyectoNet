@@ -50,7 +50,7 @@
                      <asp:Label ID="Label3" runat="server" Text="Nombre:"></asp:Label>
                 </div>
                  <div class="controles">
-                      <asp:TextBox ID="txtNombre" placeholder="Denominacion" runat="server" Enabled="True" Width="393px"></asp:TextBox>
+                      <asp:TextBox ID="txtNombre" placeholder="Denominacion" runat="server" Enabled="True" Width="467px"></asp:TextBox>
                  </div>
                 </div>
 
@@ -61,28 +61,32 @@
                      <asp:Label ID="Label4" runat="server" Text="Direccion:"></asp:Label>
                 </div>
                  <div class="controles">
-                     <asp:TextBox CssClass="input" ID="TxtDireccion" placeholder="Reseñas de Direccion" runat="server" Enabled="True" ></asp:TextBox>
+                     <asp:TextBox CssClass="input" ID="TxtDireccion" placeholder="Reseñas de Direccion" runat="server" Enabled="True" Width="466px" ></asp:TextBox>
                 </div>
             
             </div>
 
          <div class="filas">
-                <div class="titulos">
-                     <asp:Label ID="Label5" runat="server" Text="Provincia:"></asp:Label>
-                </div>
-                 <div class="controles">
-                     <asp:TextBox ID="txtProvincia" placeholder="nombre de provincia" runat="server" Enabled="True" Width="469px" ></asp:TextBox>
-                </div>
-            
-            </div>
 
-         <div class="filas">
-                <div class="titulos">
+
+                  <div class="titulos">
                      <asp:Label ID="Label6" runat="server" Text="Ciudad:"></asp:Label>
                 </div>
                  <div class="controles">
                      <asp:TextBox ID="txtCiudad" placeholder="Poblacion" runat="server" Enabled="True" Width="469px" ></asp:TextBox>
                 </div>
+                
+            
+            </div>
+
+         <div class="filas">
+             <div class="titulos">
+                     <asp:Label ID="Label5" runat="server" Text="Provincia:"></asp:Label>
+                </div>
+                 <div class="controles">
+                     <asp:TextBox ID="txtProvincia" placeholder="nombre de provincia" runat="server" Enabled="True" Width="469px" ></asp:TextBox>
+                </div>
+           
             
             </div>
 

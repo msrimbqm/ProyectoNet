@@ -26,7 +26,7 @@
    
     <div class="cabeceracampos">
    
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdEquipo" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1006px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Height="269px">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdEquipo" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1043px"  OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Height="490px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField SelectText="■■" ShowSelectButton="True" />

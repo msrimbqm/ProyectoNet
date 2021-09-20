@@ -39,7 +39,7 @@
                      <asp:Label ID="Label2" runat="server" Text="Descripción::"></asp:Label>
                 </div>
                  <div class="controles">
-                     <asp:TextBox ID="txtDescripcion" placeholder="Descripcion del Equipo" runat="server" Enabled="True"></asp:TextBox>
+                     <asp:TextBox ID="txtDescripcion" placeholder="Descripcion del Equipo" runat="server" Enabled="True" Width="463px"></asp:TextBox>
                 </div>
                </div>
 
