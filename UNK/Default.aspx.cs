@@ -65,10 +65,10 @@ namespace UNK
                     if (cantidad == 1) LabelResultado.Text = "";
                     else
                         LabelResultado.Text = "DEBE SELECCIONAR UN REGISTRO";
-
                     conexion.Close();
                     GridView1.DataBind();
                 }
+
                 catch
                 {
                    LabelResultado.Text = "ERROR DE BORRADO EN BASE DE DATOS";
