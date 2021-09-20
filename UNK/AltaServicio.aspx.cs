@@ -237,7 +237,7 @@ namespace UNK
         }
 
 
-
+        /*
         private void BindGrid()
         {
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
@@ -255,7 +255,7 @@ namespace UNK
             }
         }
 
-
+*/
 
 
 
