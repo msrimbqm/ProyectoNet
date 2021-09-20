@@ -111,9 +111,37 @@
                  </div>
                       
                  <div class="controles">
-                     <asp:FileUpload ID="fileup" runat="server" />
-                </div>
-              </div>
+                     <asp:FileUpload ID="FileUpload1" runat="server" />
+                     &nbsp;
+                     &nbsp;
+                
+                     <asp:Button class="botonin" ID="btnUpload" runat="server" Text="Subir Archivo" Width="100px" OnClick="btnUpload_Click" />
+             
+            
+        
+        
+               <div>
+                        <asp:GridView ID="GridView1" runat="server"   
+              
+                         AutoGenerateColumns="False" CssClass="table" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" DataSourceID="SqlDataSource4" Width="524px">  
+                         <Columns>  
+                       <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />  
+                         </Columns>  
+                        </asp:GridView> 
+                       
+
+                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:unkeeperConnectionString %>" SelectCommand="SELECT [Name] FROM [TFiles]" 
+                        >
+
+                     </asp:SqlDataSource>
+
+
+            </div>
+
+
+
+
+
         
 
         </div> <!-- de container-->
@@ -128,5 +156,6 @@
 
 
 
+</div>
 </div>
 </asp:Content>

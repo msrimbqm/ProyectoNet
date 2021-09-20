@@ -117,6 +117,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\Styles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Entrada.aspx" />
     <Content Include="Equipos.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada.aspx.cs">
+      <DependentUpon>Entrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Entrada.aspx.designer.cs">
+      <DependentUpon>Entrada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipos.aspx.cs">
       <DependentUpon>Equipos.aspx</DependentUpon>

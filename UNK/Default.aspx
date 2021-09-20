@@ -35,7 +35,7 @@
    
     <div class="cabeceracampos">
         <h1></h1>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdServicio" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="1043px" Height="490px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="IdServicio" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="961px" Height="490px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField SelectText="■■" ShowSelectButton="True" />

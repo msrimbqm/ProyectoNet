@@ -1,6 +1,6 @@
 ﻿body {
     background-image: url('/img/engranajesok.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
 }
 
@@ -79,3 +79,14 @@ div.controles {
     border-radius: 100px;
     border-style:none;
 }
+
+
+.entrada{
+
+    text-align:center;
+    width:100%;
+   height:50px;
+
+
+}
+
