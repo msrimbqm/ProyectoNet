@@ -51,7 +51,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Servicios</a></li>
+                        <li><a runat="server" href="Servicios.aspx">Servicios</a></li>
                         <li><a runat="server" href="Proveedores.aspx">Proveedores</a></li>
                         <li><a runat="server" href="Equipos.aspx">Equipos</a></li>
 

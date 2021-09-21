@@ -98,13 +98,10 @@ namespace UNK
 
         protected void btnHome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("Servicios.aspx");
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
@@ -203,6 +200,9 @@ namespace UNK
 
         protected void DownloadFile(object sender, EventArgs e)
         {
+
+       
+             // obtener id del que quiero descargar
             int id = int.Parse((sender as LinkButton).CommandArgument);
             byte[] bytes;
             string fileName, contentType;
@@ -234,37 +234,67 @@ namespace UNK
             Response.BinaryWrite(bytes);
             Response.Flush();
             Response.End();
+
         }
 
-
-        /*
-        private void BindGrid()
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+
+           
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            // prueba para ver descarga de PM, lo unico es al pulsar en descargar que pase el valor a la funcion downloadfile.
+           int  id = 39;
+            byte[] bytes;
+            string fileName, contentType;
+            string constr = ConfigurationManager.ConnectionStrings["SQLConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.CommandText = "select id, Name from TFiles";
+                    cmd.CommandText = "select id, Name, Data, ContentType from TFiles where id=@Id";
+                    cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Connection = con;
                     con.Open();
-                    GridView1.DataSource = cmd.ExecuteReader();
-                    GridView1.DataBind();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        bytes = (byte[])sdr["Data"];
+                        contentType = sdr["ContentType"].ToString();
+                        fileName = sdr["Name"].ToString();
+                    }
                     con.Close();
                 }
             }
+            Response.Clear();
+            Response.Buffer = true;
+            Response.Charset = "";
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.ContentType = contentType;
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
+            Response.BinaryWrite(bytes);
+            Response.Flush();
+            Response.End();
+
+
+
         }
-
-*/
-
-
-
-
-
-
-
-
     }
 
+  }
 
-}
+
+
+
+
+
+      
+
+
+
+
+
+
