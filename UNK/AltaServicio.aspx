@@ -71,11 +71,11 @@
                      <asp:Label ID="Label4" runat="server" Text="Fecha:"></asp:Label>
                 </div>
                    
-                 <!--<div class="controles">-->
-                      <asp:Calendar ID="calFecha" runat="server"  Width="349px"  OnSelectionChanged="calFecha_SelectionChanged">
+                 <div class="cal">
+                      <asp:Calendar ID="calFecha" runat="server"  Width="354px"  OnSelectionChanged="calFecha_SelectionChanged">
                       </asp:Calendar>
                      
-                <!--</div>-->
+                   </div>
              </div>
 
                 <div class="filas">
@@ -93,15 +93,13 @@
                   <div class="filas">
 
                     <div class="titulos">
-                     <asp:Label ID="Label7" runat="server" Text="Vencimiento:"></asp:Label>
+                        <asp:Label ID="Label7" runat="server" Text="Vencimiento:"></asp:Label>
                     </div>
-                   
-                     <!--<div class="controles">-->
-                      <asp:Calendar ID="calVencimiento" runat="server" Width="347px" OnSelectionChanged="calVencimiento_SelectionChanged">
+                    <div class="cal">
+                          <asp:Calendar ID="calVencimiento" runat="server" Width="364px" OnSelectionChanged="calVencimiento_SelectionChanged">
                       </asp:Calendar>
-                     <!--</div>-->
-                     
-                </div>
+                    </div>
+                 </div>
 
 
                 <div class="filas">
@@ -117,15 +115,15 @@
                      <asp:FileUpload ID="FileUpload1" runat="server" />
                      &nbsp;
                      &nbsp;
-                     <asp:TextBox ID="txtidgrid" runat="server"></asp:TextBox>
-                
+                                     
                                  
         
         
-               <div>
+
+                <div>
                         <asp:GridView ID="GridView1" runat="server"   
               
-                         AutoGenerateColumns="False" CssClass="table" DataSourceID="SqlDataSource4" Width="524px" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">  
+                         AutoGenerateColumns="False" CssClass="table" DataSourceID="SqlDataSource4" Width="336px" CellPadding="4" ForeColor="#333333" GridLines="None">  
                             <AlternatingRowStyle BackColor="White" />
                          <Columns>  
 
@@ -133,9 +131,7 @@
 
                             <asp:BoundField DataField="Name" HeaderText="" SortExpression="Name" />  
                              <asp:TemplateField ItemStyle-HorizontalAlign="Center">  
-                            <ItemTemplate>  
-                            <asp:LinkButton ID="lnkDownload" runat="server" Text="Download" OnClick="DownloadFile" CommandArgument='<%# Eval("id") %>'></asp:LinkButton>  
-                            </ItemTemplate>  
+                           
                             </asp:TemplateField>
 
                          </Columns>  
@@ -157,7 +153,7 @@
                          
                      </asp:SqlDataSource>
 
-            </div>
+          
 
 
         </div> <!-- de container-->
@@ -170,4 +166,5 @@
                    
 </div>
 </div>
+    </div>
 </asp:Content>

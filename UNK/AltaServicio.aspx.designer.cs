@@ -195,15 +195,6 @@ namespace UNK
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
 
         /// <summary>
-        /// Control txtidgrid.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtidgrid;
-
-        /// <summary>
         /// Control GridView1.
         /// </summary>
         /// <remarks>

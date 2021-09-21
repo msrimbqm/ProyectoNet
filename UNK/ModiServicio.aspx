@@ -71,11 +71,11 @@
                      <asp:Label ID="Label4" runat="server" Text="Fecha:"></asp:Label>
                 </div>
                    
-                <!-- <div class="controles">-->
+                <div class="cal">
                       <asp:Calendar ID="calFecha" runat="server"  Width="350px">
                       </asp:Calendar>
                      
-                <!--</div>-->
+                </div>
              </div>
 
                 <div class="filas">
@@ -96,11 +96,12 @@
                      <asp:Label ID="Label7" runat="server" Text="Vencimiento:"></asp:Label>
                 </div>
                    
-                 <!--<div class="controles">-->
+                 <div class="cal">
                       <asp:Calendar ID="calVencimiento" runat="server" Width="350px">
                       </asp:Calendar>
                      
-                <!--</div>-->
+                </div>
+                </div>
 
 
                 <div class="filas">
@@ -110,12 +111,48 @@
                  </div>
                       
                  <div class="controles">
-                     <asp:FileUpload ID="fileup" runat="server" />
+                     <asp:Button class="botonin" ID="btnUpload" runat="server" Text="Subir Archivo" Width="100px" OnClick="btnUpload_Click" />
+                     <asp:FileUpload ID="FileUpload1" runat="server" />
+                     &nbsp;
+                     &nbsp;
+                    
                 </div>
               </div>
               
 
+        <asp:GridView ID="GridView1" runat="server"   
+              
+                         AutoGenerateColumns="False" CssClass="table" DataSourceID="SqlDataSource4" Width="336px" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">  
+                            <AlternatingRowStyle BackColor="White" />
+                         <Columns>  
+
+                          
+
+                            <asp:BoundField DataField="Name" HeaderText="" SortExpression="Name" />  
+                             <asp:TemplateField ItemStyle-HorizontalAlign="Center">  
+                            <ItemTemplate>  
+                            <asp:LinkButton ID="lnkDownload" runat="server" Text="Download" OnClick="DownloadFile" CommandArgument='<%# Eval("id") %>'></asp:LinkButton>  
+                            </ItemTemplate>  
+                            </asp:TemplateField>
+
+                         </Columns>  
+                            <EditRowStyle BackColor="#7C6F57" />
+                            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="BurlyWood" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#E3EAEB" />
+                            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                            <SortedAscendingHeaderStyle BackColor="#246B61" />
+                            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                            <SortedDescendingHeaderStyle BackColor="#15524A" />
+                        </asp:GridView>
+
+                      
+
         
+
+                    
 
                       
 

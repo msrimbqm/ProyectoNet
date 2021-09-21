@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -60,6 +63,7 @@ namespace UNK
                 } // de lectura  registro
 
                 conexion.Close();
+                cargargrid(txtIdServicio.Text);
 
             } // del control de carga solo una vez
         }
@@ -116,7 +120,155 @@ namespace UNK
         {
             Response.Redirect("Servicios.aspx");
         }
+
+
+        protected void cargargrid(string p)
+
+        {
+
+            // cargar grid archivos con ese servicio
+
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
+
+            SqlConnection conexion = new SqlConnection(s);
+            conexion.Open();
+            string cadena = "select id,Name from TFiles where idServicio='" + p + "'";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            GridView1.DataSourceID = "";
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+            conexion.Close();
+
+
+
+        }
+
+        protected void DownloadFile(object sender, EventArgs e)
+        {
+
+
+            // obtener id del que quiero descargar
+            int id = int.Parse((sender as LinkButton).CommandArgument);
+            byte[] bytes;
+            string fileName, contentType;
+            string constr = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.CommandText = "select id, Name, Data, ContentType from TFiles where id=@Id";
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Connection = con;
+                    con.Open();
+                    using (SqlDataReader sdr = cmd.ExecuteReader())
+                    {
+                        sdr.Read();
+                        bytes = (byte[])sdr["Data"];
+                        contentType = sdr["ContentType"].ToString();
+                        fileName = sdr["Name"].ToString();
+                    }
+                    con.Close();
+                }
+            }
+            Response.Clear();
+            Response.Buffer = true;
+            Response.Charset = "";
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.ContentType = contentType;
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
+            Response.BinaryWrite(bytes);
+            Response.Flush();
+            Response.End();
+
+        }
+
+      
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+
+            // cargar un archivo vinculado a la tabla por el Id del Servicio
+            string idfile = "";
+            if (txtIdServicio.Text != "")
+            {
+                // caso de estar modificando
+                idfile = txtIdServicio.Text;
+            }
+            else
+            { // averiguar que usara como int siguiente el identity}
+
+                idfile = (ultimovalor() + 1).ToString();
+            }
+
+
+            using (Stream fs = FileUpload1.PostedFile.InputStream)
+            {
+                using (BinaryReader br = new BinaryReader(fs))
+                {
+                    byte[] bytes = br.ReadBytes((Int32)fs.Length);
+
+                    //This line of code is reading the bytes .    
+                    string constr = ConfigurationManager.ConnectionStrings["unkeeperConnectionString"].ConnectionString;
+                    using (SqlConnection con = new SqlConnection(constr))
+                    {
+
+                        string query = "insert into TFiles values (@Name, @ContentType, @Data,@idServicio)";
+                        using (SqlCommand cmd = new SqlCommand(query))
+                        {
+                            cmd.Connection = con;
+                            cmd.Parameters.AddWithValue("@Name", FileUpload1.PostedFile.FileName);
+                            cmd.Parameters.AddWithValue("@ContentType", FileUpload1.PostedFile.ContentType);
+                            cmd.Parameters.AddWithValue("@Data", bytes);
+                            cmd.Parameters.AddWithValue("@idServicio", idfile);
+                            if (FileUpload1.PostedFile.FileName != "")
+                            {
+                                con.Open();
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                        }
+                    }
+                }
+            }
+            cargargrid(idfile);
+
+        }
+
+        protected int ultimovalor()
+        {
+
+
+            // debe devolver en int el ultimo id asignado
+            int x = 0;
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
+            SqlConnection conexion = new SqlConnection(s);
+            conexion.Open();
+            SqlCommand comando = new SqlCommand("select IDENT_CURRENT( 'TServicio' ) as P", conexion);
+            SqlDataReader registro = comando.ExecuteReader();
+
+            if (registro.Read())
+            {
+                // encontro el registro
+                x = int.Parse(registro["P"].ToString());
+            }
+            // LabelResultado.Text = "el ultimo obtenido es:"+x.ToString();
+            return x;
+        }
+
+
+
     }
+
+
+
 }
 
 

@@ -90,3 +90,11 @@ div.controles {
 
 }
 
+.cal {
+    
+    box-sizing: border-box;
+    float: left;
+    width: 70%;
+    padding-left:0px;
+    text-align:left;
+}
