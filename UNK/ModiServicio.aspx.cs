@@ -46,7 +46,7 @@ namespace UNK
 
                     // cargar fechas en los calendar formato español en la presentacion de web calendar
 
-                    string cadena = f1.Day.ToString() + "/" + f1.Month.ToString() + "/" + f1.Year.ToString();
+                   string cadena = f1.Day.ToString() + "/" + f1.Month.ToString() + "/" + f1.Year.ToString();
                     
                     //LabelResultado.Text = cadena-------------------------------------------------------------;
                     calFecha.SelectedDate = Convert.ToDateTime(cadena);
@@ -263,8 +263,38 @@ namespace UNK
             return x;
         }
 
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            // borrar por id, de la tabla, solo queda recupear en un string elvalor de la tabla columna id qu pincho boton borrar
+
+            // consigo el valor id de la fila del archivo
+            string x=GridView1.Rows[e.RowIndex].Cells[1].Text;
 
 
+            try
+            {
+
+                string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
+
+                SqlConnection conexion = new SqlConnection(s);
+                conexion.Open();
+                string cadena = "delete from TFiles where id='" + x + "'";
+                // LabelResultado.Text = cadena;
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                int cantidad = comando.ExecuteNonQuery();
+
+                if (cantidad == 1) LabelResultado.Text = "";
+
+                conexion.Close();
+            }
+
+            catch
+            {
+                LabelResultado.Text = "ERROR DE BORRADO EN BASE DE DATOS";
+            }
+
+            cargargrid(txtIdServicio.Text);
+        }
     }
 
 

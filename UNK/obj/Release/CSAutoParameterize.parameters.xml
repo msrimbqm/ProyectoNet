@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="unkeeperConnectionString-Web.config Connection String" description="unkeeperConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=tcp:msrimbqm.database.windows.net,1433;Initial Catalog=unkeeper;User ID=msrimbqm;Password=Monegros0." tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tarde\\Desktop\\CURSONETGIT\\msrimbqm\\Proyecto\\UNK\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='unkeeperConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="SQLConnectionString-Web.config Connection String" description="SQLConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=tcp:msrimbqm.database.windows.net,1433;Initial Catalog=unkeeper;Persist Security Info=True;User ID=msrimbqm;Password=Monegros0." tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tarde\\Desktop\\CURSONETGIT\\msrimbqm\\Proyecto\\UNK\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SQLConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

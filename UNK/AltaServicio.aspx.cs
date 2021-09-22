@@ -207,44 +207,7 @@ namespace UNK
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            // prueba para ver descarga de PM, lo unico es al pulsar en descargar que pase el valor a la funcion downloadfile.
-           int  id = 39;
-            byte[] bytes;
-            string fileName, contentType;
-            string constr = ConfigurationManager.ConnectionStrings["SQLConnectionString"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.CommandText = "select id, Name, Data, ContentType from TFiles where id=@Id";
-                    cmd.Parameters.AddWithValue("@Id", id);
-                    cmd.Connection = con;
-                    con.Open();
-                    using (SqlDataReader sdr = cmd.ExecuteReader())
-                    {
-                        sdr.Read();
-                        bytes = (byte[])sdr["Data"];
-                        contentType = sdr["ContentType"].ToString();
-                        fileName = sdr["Name"].ToString();
-                    }
-                    con.Close();
-                }
-            }
-            Response.Clear();
-            Response.Buffer = true;
-            Response.Charset = "";
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            Response.ContentType = contentType;
-            Response.AppendHeader("Content-Disposition", "attachment; filename=" + fileName);
-            Response.BinaryWrite(bytes);
-            Response.Flush();
-            Response.End();
-
-
-
-        }
+       
     }
 
   }

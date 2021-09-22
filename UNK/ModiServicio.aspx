@@ -14,7 +14,7 @@
 
                  <asp:Button ID="btnHome" runat="server" Text="Volver" class="botonin"  Width="144px" OnClick="btnHome_Click" />
 
-                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="Red"></asp:Label>
+                 <asp:Label ID="LabelResultado" runat="server" Text="" ForeColor="Red" BackColor="black" ></asp:Label>
               
             </div>
 
@@ -122,18 +122,22 @@
 
         <asp:GridView ID="GridView1" runat="server"   
               
-                         AutoGenerateColumns="False" CssClass="table" DataSourceID="SqlDataSource4" Width="336px" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">  
+                         AutoGenerateColumns="False" CssClass="table" DataSourceID="SqlDataSource4" Width="336px" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleting="GridView1_RowDeleting">  
                             <AlternatingRowStyle BackColor="White" />
                          <Columns>  
 
-                          
 
                             <asp:BoundField DataField="Name" HeaderText="" SortExpression="Name" />  
+                              <asp:BoundField DataField="id" HeaderText="" SortExpression="Name" />  
                              <asp:TemplateField ItemStyle-HorizontalAlign="Center">  
                             <ItemTemplate>  
-                            <asp:LinkButton ID="lnkDownload" runat="server" Text="Download" OnClick="DownloadFile" CommandArgument='<%# Eval("id") %>'></asp:LinkButton>  
+                            <asp:LinkButton ID="lnkDownload" runat="server" Text="Descargar" OnClick="DownloadFile" CommandArgument='<%# Eval("id") %>'></asp:LinkButton> 
+                               
                             </ItemTemplate>  
+                            <ItemStyle HorizontalAlign="Center"></ItemStyle>
                             </asp:TemplateField>
+                             <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Borrar"/>
+                             
 
                          </Columns>  
                             <EditRowStyle BackColor="#7C6F57" />
@@ -148,27 +152,8 @@
                             <SortedDescendingHeaderStyle BackColor="#15524A" />
                         </asp:GridView>
 
-                      
-
-        
-
-                    
-
-                      
-
-        
-
         </div> <!-- de container-->
 
 
 
-
-
-
-
-
-
-
-
-</div>
 </asp:Content>
