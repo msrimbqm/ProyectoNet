@@ -267,7 +267,7 @@ namespace UNK
         {
             // borrar por id, de la tabla, solo queda recupear en un string elvalor de la tabla columna id qu pincho boton borrar
 
-            // consigo el valor id de la fila del archivo
+            // consigo el valor id de la fila del archivo que pincho en la fila
             string x=GridView1.Rows[e.RowIndex].Cells[1].Text;
 
 

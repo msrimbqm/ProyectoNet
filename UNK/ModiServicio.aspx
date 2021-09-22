@@ -72,7 +72,15 @@
                 </div>
                    
                 <div class="cal">
-                      <asp:Calendar ID="calFecha" runat="server"  Width="350px">
+                      <asp:Calendar ID="calFecha" runat="server"  Width="220px" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px">
+                          <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                          <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                          <OtherMonthDayStyle ForeColor="#999999" />
+                          <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                          <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                          <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                          <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                          <WeekendDayStyle BackColor="#CCCCFF" />
                       </asp:Calendar>
                      
                 </div>
@@ -97,7 +105,15 @@
                 </div>
                    
                  <div class="cal">
-                      <asp:Calendar ID="calVencimiento" runat="server" Width="350px">
+                      <asp:Calendar ID="calVencimiento" runat="server" Width="220px" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px">
+                          <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                          <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
+                          <OtherMonthDayStyle ForeColor="#999999" />
+                          <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                          <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                          <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
+                          <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                          <WeekendDayStyle BackColor="#CCCCFF" />
                       </asp:Calendar>
                      
                 </div>
@@ -128,7 +144,7 @@
 
 
                             <asp:BoundField DataField="Name" HeaderText="" SortExpression="Name" />  
-                              <asp:BoundField DataField="id" HeaderText="" SortExpression="Name" />  
+                              <asp:BoundField DataField="id" HeaderText="" SortExpression="Name"  />  
                              <asp:TemplateField ItemStyle-HorizontalAlign="Center">  
                             <ItemTemplate>  
                             <asp:LinkButton ID="lnkDownload" runat="server" Text="Descargar" OnClick="DownloadFile" CommandArgument='<%# Eval("id") %>'></asp:LinkButton> 

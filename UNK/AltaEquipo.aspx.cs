@@ -12,8 +12,8 @@ namespace UNK
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            calFecha.SelectedDate = DateTime.Today;
-            calFecha.VisibleDate = DateTime.Today;
+            //calFecha.SelectedDate = DateTime.Today;
+            //calFecha.VisibleDate = DateTime.Today;
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)

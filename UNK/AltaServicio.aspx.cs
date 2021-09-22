@@ -20,10 +20,10 @@ namespace UNK
         protected void Page_Load(object sender, EventArgs e)
         {
             // poner fecha actuale en los calendar
-            calFecha.VisibleDate = DateTime.Today;
-            calFecha.SelectedDate = DateTime.Today;
-            calVencimiento.VisibleDate = DateTime.Today;
-            calVencimiento.SelectedDate = DateTime.Today;
+           // calFecha.VisibleDate = DateTime.Today;
+           // calFecha.SelectedDate = DateTime.Today;
+           // calVencimiento.VisibleDate = DateTime.Today;
+           // calVencimiento.SelectedDate = DateTime.Today;
             txtIdServicio.Text = "";
             // carga el grid sin datos dentro
 
@@ -169,7 +169,7 @@ namespace UNK
                 // encontro el registro
                 x = int.Parse(registro["P"].ToString());
             }
-           // LabelResultado.Text = "el ultimo obtenido es:"+x.ToString();
+           
             return x;
         }
 
@@ -180,7 +180,6 @@ namespace UNK
             // cargar grid archivos con ese servicio
 
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["SQLConnectionString"].ToString();
-
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
             string cadena = "select id,Name from TFiles where idServicio='" + p + "'";
@@ -192,9 +191,6 @@ namespace UNK
             GridView1.DataSource = dt;
             GridView1.DataBind();
             conexion.Close();
-            
-
-
         }
 
 

@@ -26,7 +26,7 @@ namespace UNK
         {
             if (txtId.Text != "")
             {
-                // COMPRUEBA LO MANDA A ABRI PAGINA CON UNO SELECCCIONADO
+                // COMPRUEBA LO MANDA A ABRIR PAGINA CON UNO SELECCCIONADO
                 string cadena = "ModiServicio.aspx?id=" + txtId.Text;
                 Response.Redirect(cadena);
             }
