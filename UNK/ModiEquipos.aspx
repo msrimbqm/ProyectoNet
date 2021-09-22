@@ -92,7 +92,7 @@
                 <div class="titulos">
                      <asp:Label ID="Label11" runat="server" Text="Fecha Instalacion:"></asp:Label>
                 </div>
-                 <!--<div class="controles">-->
+                 <div class="cal">
 
                       <asp:Calendar ID="calFecha" runat="server"  Width="220px" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px"   >
                           <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
@@ -105,9 +105,8 @@
                           <WeekendDayStyle BackColor="#CCCCFF" />
                       </asp:Calendar>
                     
-               <!-- </div>-->
-            
-            </div>
+               </div>            
+           </div>
 
         <div class="filas">
                 <div class="titulos">
