@@ -46,19 +46,29 @@ namespace UNK
 
                     // cargar fechas en los calendar formato español en la presentacion de web calendar
 
-                   string cadena = f1.Day.ToString() + "/" + f1.Month.ToString() + "/" + f1.Year.ToString();
+                   string cadena = f1.Day.ToString() + f1.Month.ToString() + f1.Year.ToString();
                     
+
                     //LabelResultado.Text = cadena-------------------------------------------------------------;
-                    calFecha.SelectedDate = Convert.ToDateTime(cadena);
-                    calFecha.VisibleDate = Convert.ToDateTime(cadena);
-                 
+                    //calFecha.SelectedDate = Convert.ToDateTime(cadena);
+                    calFecha.SelectedDate = f1;
+                    calFecha.VisibleDate = f1;
+                   
+                    //calFecha.VisibleDate = Convert.ToDateTime(cadena);
+               
                    
                    // LabelResultado.Text = calFecha.SelectedDate.ToString();
                     
 
                     cadena = f2.Day.ToString() + "/" + f2.Month.ToString() + "/" + f2.Year.ToString();
-                    calVencimiento.SelectedDate = Convert.ToDateTime(cadena);
-                    calVencimiento.VisibleDate = Convert.ToDateTime(cadena);
+
+                    //calVencimiento.SelectedDate = Convert.ToDateTime(cadena);
+                    //calVencimiento.VisibleDate = Convert.ToDateTime(cadena);
+                    calVencimiento.SelectedDate = f2;
+                    calVencimiento.VisibleDate = f2;
+
+
+
 
                 } // de lectura  registro
 

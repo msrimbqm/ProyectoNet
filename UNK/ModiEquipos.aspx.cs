@@ -45,8 +45,11 @@ namespace UNK
                     string cadena = f1.Day.ToString() + "/" + f1.Month.ToString() + "/" + f1.Year.ToString();
 
                     //LabelResultado.Text = cadena-------------------------------------------------------------;
-                    calFecha.SelectedDate = Convert.ToDateTime(cadena);
-                    calFecha.VisibleDate = Convert.ToDateTime(cadena);
+                    //calFecha.SelectedDate = Convert.ToDateTime(cadena);
+                    //calFecha.VisibleDate = Convert.ToDateTime(cadena);
+                    calFecha.SelectedDate = f1;
+                    calFecha.VisibleDate = f1;
+
 
                 } // de lectura  registro
 

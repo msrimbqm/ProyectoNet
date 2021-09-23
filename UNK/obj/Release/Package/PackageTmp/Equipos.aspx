@@ -34,7 +34,7 @@
                 <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
                 <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
                 <asp:BoundField DataField="Fabricante" HeaderText="Fabricante" SortExpression="Fabricante" />
-                <asp:BoundField DataField="FechaInstalacion" HeaderText="FechaInstalacion" SortExpression="FechaInstalacion" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="FechaInstalacion" HeaderText="FechaInstalacion" SortExpression="FechaInstalacion" DataFormatString = "{0:dd/MM/yyyy}" />
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

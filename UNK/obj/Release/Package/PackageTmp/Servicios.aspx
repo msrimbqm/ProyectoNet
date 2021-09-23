@@ -41,8 +41,8 @@
                 <asp:CommandField SelectText="■■" ShowSelectButton="True" />
                 <asp:BoundField DataField="IdServicio" HeaderText="IdServicio" InsertVisible="False" ReadOnly="True" SortExpression="IdServicio" />
                 <asp:BoundField DataField="Trabajo" HeaderText="Trabajo" SortExpression="Trabajo" />
-                <asp:BoundField DataField="Intervencion" HeaderText="Intervencion" SortExpression="Intervencion" DataFormatString="{0:d}" />
-                <asp:BoundField DataField="Vencimiento" HeaderText="Vencimiento" SortExpression="Vencimiento" DataFormatString="{0:d}" />
+                <asp:BoundField DataField="Intervencion" HeaderText="Intervencion" SortExpression="Intervencion" DataFormatString = "{0:dd/MM/yyyy}" />
+                <asp:BoundField DataField="Vencimiento" HeaderText="Vencimiento" SortExpression="Vencimiento" DataFormatString = "{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="Proveedor" HeaderText="Proveedor" SortExpression="Proveedor" />
                 <asp:BoundField DataField="Equipo" HeaderText="Equipo" SortExpression="Equipo" />
             </Columns>

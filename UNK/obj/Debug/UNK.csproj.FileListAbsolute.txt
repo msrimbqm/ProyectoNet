@@ -833,4 +833,3 @@ C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet3\UNK\obj\Debug\UNK.csp
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet3\UNK\obj\Debug\UNK.csproj.CopyComplete
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet3\UNK\obj\Debug\UNK.dll
 C:\Users\QM\Documents\MISCOC ANTERIOR1019\MSR\ProyectoNet3\UNK\obj\Debug\UNK.pdb
-C:\Users\Tarde\Desktop\CURSONETGIT\msrimbqm\Proyecto\UNK\obj\Debug\UNK.csproj.AssemblyReference.cache
